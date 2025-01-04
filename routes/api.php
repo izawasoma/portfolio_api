@@ -8,6 +8,6 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::group(["prefix" => "sample", "as" => "sample."], function() {
-    Route::get("", [\App\Http\Controllers\SampleController::class, "list"])->name("list");
-    Route::post("", [\App\Http\Controllers\SampleController::class, "create"])->name("create");
+    Route::get("", [\App\Http\Controllers\SampleController::class, "apilist"])->name("apilist");
+    Route::post("", [\App\Http\Controllers\SampleController::class, "apicreate"])->name("apicreate");
 });

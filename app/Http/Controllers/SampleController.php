@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SampleRequest;
+use App\Http\Requests\SampleRequestAPI;
 use App\Models\Sample;
 use Exception;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class SampleController extends Controller
         }
     }
 
-    public function apicreate(SampleRequest $req)
+    public function apicreate(SampleRequestAPI $req)
     {
         $validated = $req->validated();
         try {

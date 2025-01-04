@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'sample')
+@section('title', '新規サンプル登録')
 
 @section('content')
 <!-- コンテンツ -->
 <div class="container">
     <div class="col-md-8 mt-5 w-75 mx-auto">
         <div class="card">
-            <div class="card-header">新規案件登録</div>
+            <div class="card-header">新規サンプル登録</div>
             <div class="card-body">
                 <form method="post" action="{{ route('sample.add') }}">
                     @csrf
@@ -29,7 +29,7 @@
                             @endif　
                         </div>
                     </div>
-                    <a href="{{route('sample.list')}}" class="btn btn-secondary"><i class="fas fa-chevron-circle-left"></i> 顧客情報一覧へ戻る</a>　
+                    <a href="{{route('sample.list')}}" class="btn btn-secondary"><i class="fas fa-chevron-circle-left"></i> 一覧画面へ戻る</a>　
                     <button type="submit" class="btn btn-dark" id="formButton"><i class="fas fa-plus-circle"></i> サンプルデータを新規追加</button>
                 </form>
             </div>

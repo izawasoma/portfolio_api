@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @hasSection('title')
-    <title>@yield('title')|水岩運送基幹システム</title>
+    <title>@yield('title')|ZawaAdmin</title>
     @else
-    <title>水岩運送基幹システム</title>
+    <title>ZawaAdmin</title>
     @endif
 
     <!-- Fonts -->
@@ -19,13 +19,13 @@
 </head>
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <header class="bg-dark px-5" style="height: 7vh;">
-        <h1>@yield('title')</h1>
+    <header class="bg-dark px-5 text-white d-flex align-items-center" style="height: 7vh;">
+        <h1 class="fs-3 mb-0">ZawaAdmin</h1>
     </header>
     <main class="px-5 py-3" style="min-height: 86vh;">
         @yield('content')
     </main>
-    <footer class="bg-dark px-5" style="height: 7vh;">
+    <footer class="bg-dark px-5 text-white d-flex align-items-center justify-content-center" style="height: 7vh;">
         sample
     </footer>
 </body>

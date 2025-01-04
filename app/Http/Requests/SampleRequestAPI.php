@@ -7,7 +7,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
-class SampleRequest extends FormRequest
+class SampleRequestAPI extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,5 +28,11 @@ class SampleRequest extends FormRequest
             "title" => "required|string|max:8",
             "memo" => "string|max:20",
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $response['errors']  = $validator->errors()->toArray();
+        throw new HttpResponseException(response()->json($response, Response::HTTP_BAD_REQUEST));
     }
 }
